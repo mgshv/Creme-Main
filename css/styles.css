@@ -1,0 +1,42 @@
+/* Reset & base */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Arial', sans-serif; line-height:1.4; color:#222; }
+
+/* Grid setup */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  grid-auto-rows: 200px;
+  gap: 16px;
+  padding: 32px;
+}
+
+/* Card base */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+
+/* Variants */
+.logo-card { display:flex; align-items:center; justify-content:center; font-size:1.5rem; background:#222; color:#fff; }
+.logo-card .small { opacity:.6; font-size:.75rem; text-transform:uppercase; }
+
+.text-card { display:flex; align-items:center; justify-content:center; text-align:center; }
+.text-card.gray { background:#eee; }
+.metrics-card { display:flex; justify-content:space-around; }
+.clients-card ul { list-style:none; display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+.clients-card li { font-size:.9rem; padding:.2em .6em; background:#f0f0f0; border-radius:4px; }
+
+/* Project slides */
+.project-card { grid-column: span 2; display:flex; flex-direction:column; justify-content:space-between; }
+.pagination-dots { display:flex; gap:4px; justify-content:center; padding-top:8px; }
+.dot { width:8px; height:8px; border-radius:50%; background:#ccc; }
+.dot.active { background:#333; }
+
+/* Footer spans full width */
+.footer-card { grid-column: 1 / -1; text-align:center; font-size:.9rem; color:#555; }
+.footer-card a { color:inherit; text-decoration:underline; }
